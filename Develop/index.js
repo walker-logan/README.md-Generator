@@ -1,22 +1,8 @@
-// TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// TODO: Create an array of questions for user input
-
-// Questions:
-// Github username
-// Email?
-// Title?
-// Description of the project?
-// Would you like to include a live link to the site, if it exists? y/n
-// How does the user install your project?
-// How does one use the project?
-// Who/what all do you wan't to give credit?
-// What license does your project use, if it exists?
-// How can users contribute to the project?
-// How can users test the project?
+// questions
 
 const questions = [
   // github username
@@ -68,7 +54,7 @@ const questions = [
   {
     type: "input",
     name: "projectDescription",
-    message: "What is the title of your project?",
+    message: "Provide a detailed description of your project.",
     validate: (projectDescriptionInput) => {
       if (projectDescriptionInput) {
         return true;
@@ -178,6 +164,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
+  console.log(data);
   fs.writeToFile(fileName, data, (err) => {
     if (err) throw new Error(err);
     console.log(
