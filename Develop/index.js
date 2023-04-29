@@ -178,11 +178,24 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  
+  fs.writeToFile(fileName, data, (err) => {
+    if (err) throw new Error(err);
+    console.log(
+      "README.md generated. It will be located in the new lazybones folder. Thanks for being lazy."
+    );
+  });
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  console.log(
+    `-----Hello lazy person... Answer the following prompts to get a nice and professional README.md-----`
+  );
+
+  inquirer.prompt(questions).then((readmeData) => {
+    writeToFile("./lazybones/README.md", generateMarkdown(readmeData));
+  });
+}
 
 // Function call to initialize app
 init();
