@@ -65,7 +65,34 @@ const questions = [
     },
   },
 
-  // project licesne
+  // do they have a demo link?
+  {
+    type: "confirm",
+    name: "confirmDemoLink",
+    message:
+      "Have a video or gif of the project's demo and want to include it? --Note: you can't embed a YouTube video. You must have the video or gif already uploaded to the project's GitHub repository.--",
+    default: false,
+  },
+
+  // get the demo link
+  {
+    type: "input",
+    name: "demoLink",
+    message: "Provide the link to embed the gif or video:",
+    when: ({ confirmDemoLink }) => confirmDemoLink,
+    validate: (demoLink) => {
+      if (demoLink) {
+        return true;
+      } else {
+        console.log(
+          "Shucks... What happened? Provide a valid link to your demo."
+        );
+        return false;
+      }
+    },
+  },
+
+  // project license
   {
     type: "list",
     name: "licenseChoice",
@@ -117,7 +144,8 @@ const questions = [
   {
     type: "input",
     name: "usageInstructions",
-    message: "Provide instructions to use your project:",
+    message:
+      "Provide instructions and examples so users/contributors can use the project:",
     validate: (usageInstructions) => {
       if (usageInstructions) {
         return true;
@@ -162,7 +190,8 @@ const questions = [
   },
 ];
 
-// TODO: Create a function to write README file
+
+// letting the user know it has been done/failed
 function writeToFile(fileName, data) {
   console.log(data);
   fs.writeToFile(fileName, data, (err) => {
@@ -173,7 +202,6 @@ function writeToFile(fileName, data) {
   });
 }
 
-// TODO: Create a function to initialize app
 function init() {
   console.log(
     `-----Hello lazy person... Answer the following prompts to get a nice and professional README.md-----`
@@ -184,5 +212,4 @@ function init() {
   });
 }
 
-// Function call to initialize app
 init();
