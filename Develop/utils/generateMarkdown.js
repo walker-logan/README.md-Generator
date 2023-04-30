@@ -49,7 +49,7 @@ function renderDemo(demoLink) {
 // README.md being printed out
 function generateMarkdown(data) {
   const {
-    githubUserName,
+    githubUsername,
     licenseChoice,
     confirmLiveLink,
     demoLink,
@@ -87,7 +87,7 @@ function generateMarkdown(data) {
   ${info.testInstructions}
 
   ## Questions
-  Have any questions/concerns? Reach out to me, [${info.githubUserName}](https://github.com/${info.githubUserName}) at ${
+  Have any questions/concerns? Reach out to me, [${githubUsername}](https://github.com/${githubUsername}) at ${
     info.userEmail
   }.`;
 }
