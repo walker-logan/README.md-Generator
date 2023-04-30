@@ -21,7 +21,8 @@ Apache 2.0
 ![Generic badge](https://img.shields.io/badge/License-Apache 2.0-green.svg)
 
 ## Demo
-![](https://github.com/walker-logan/Module-9-Challenge/blob/main/Untitled_%20Apr%2030%2C%202023%2010_59%20AM.gif)
+
+![](https://drive.google.com/file/d/1-ImOINAPwMwVbXr_X2z591Eb-XdtfdgD/view)
 
 ## Installation
 
