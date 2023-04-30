@@ -13,14 +13,37 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   if (!license) return "";
   let licenseUrl = license.toLowerCase(" ", "-");
-  return `https://choosealicense.com/licenses/${linkUrl}/.`;
+  return `https://choosealicense.com/licenses/${licenseUrl}/.`;
 }
 
-function renderDemo(license) {
+function renderLicenseSection(license) {
   if (!license) return "";
   return `
-  ### Live Site
-  [Click to see live site.](${liveLink})`;
+  ### Licensing
+  ${license}
+  ${renderLicenseBadge(license)}`;
+}
+
+function renderLinkSection(projectLink) {
+  if (!projectLink) {
+    return "";
+  } else {
+    return `
+  ### Live Site 
+  [Click to see live site.](${projectLink})
+  `;
+  }
+}
+
+function renderDemo(demoLink) {
+  if (!demoLink) {
+    return "";
+  } else {
+    return `
+    ### Demo 
+    ![Demo](${demoLink})
+    `;
+  }
 }
 
 // README.md being printed out
