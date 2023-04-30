@@ -57,7 +57,7 @@ function generateMarkdown(data) {
     ...info
   } = data;
   return `
-  # ${projectTitle}
+  # ${info.projectTitle}
 
   ## Table of Contents
   - [Description](#project-description)
@@ -69,6 +69,7 @@ function generateMarkdown(data) {
 
 
   ## Project Description
+  ${info.projectDescription}
   ${renderLicenseSection(licenseChoice)} 
   ${renderLinkSection(liveLink)}
   ${renderDemo(demoLink)}

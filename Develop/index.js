@@ -190,11 +190,9 @@ const questions = [
   },
 ];
 
-
 // letting the user know it has been done/failed
 function writeToFile(fileName, data) {
-  console.log(data);
-  fs.writeToFile(fileName, data, (err) => {
+  fs.writeFile(fileName, data, (err) => {
     if (err) throw new Error(err);
     console.log(
       "README.md generated. It will be located in the new lazybones folder. Thanks for being lazy."
