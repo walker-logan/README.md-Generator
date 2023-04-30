@@ -37,4 +37,4 @@ You can test this program by using your own data. Type in anything you want.
 
 ## Questions
 
-Have any questions/concerns? Hit me, (https://github.com/walker-logan), up at walker.logan44@gmail.com.
+Have any questions/concerns? Hit me up at walker.logan44@gmail.com. You can see more of my projects [here] (https://github.com/walker-logan).
