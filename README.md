@@ -22,7 +22,7 @@ Apache 2.0
 
 ## Demo
 
-![](https://drive.google.com/file/d/1-ImOINAPwMwVbXr_X2z591Eb-XdtfdgD/view)
+Check out the demo [here!](https://drive.google.com/file/d/1-ImOINAPwMwVbXr_X2z591Eb-XdtfdgD/view)
 
 ## Installation
 
