@@ -17,7 +17,7 @@ This little guy allows users to generate a professional README markdown by promp
 
 Apache 2.0
 
-[![Generic badge](https://img.shields.io/badge/License-Apache 2.0-green.svg)](https://choosealicense.com/licenses/apache 2.0/.)
+[![Generic badge](https://img.shields.io/badge/License-Apache 2.0-green.svg)]
 
 ## Installation
 

@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   if (!license) return "";
   let licenseUrl = license.toLowerCase(" ", "-");
-  return `https://choosealicense.com/licenses/${licenseUrl}/.`;
+  return `${licenseUrl}`;
 }
 
 function renderLicenseSection(license) {
